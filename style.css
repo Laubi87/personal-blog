@@ -1,0 +1,186 @@
+
+      body {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #ffffff;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: 75px 300px 400px;
+        grid-template-areas: 
+        "hr hr hr hr hr hr hr hr"
+        "hd hd hd hd hd hd hd hd"
+        "sd main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+      }
+      .hero{
+        grid-area: hr;
+        padding: 10px;
+        background-color: #2f6a49;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      .hero h1 {
+        float: left;
+        margin-top: 0px;
+        font-weight: 500;
+        font-size: 38px
+      }
+      .sidebar h2 {
+        margin: 0px;
+        font-weight: 500;
+      }
+      .content h2, h3 {
+        margin: 0px;
+        padding-left: 10px;
+        font-weight: 500;
+      }
+      .header{
+        grid-area: hd;
+        background-image: url(/img/thought-catalog-9aOswReDKPo-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .footer{
+        grid-area: ft;
+        display: flex;
+        background-color: #ffb6c4;
+        color: #2F6A49;
+      }
+      .sidebar{
+        grid-area: sd;
+        padding: 10px;
+        background-color: #2f6a49;
+      }
+      .sidebar p {
+        padding-top: 30px;
+        font-weight: 500;
+      }
+      .content{
+        grid-area: main;
+        padding: 10px;
+        background-color: #2f6a49;
+      }
+      .logo {
+        float: left;
+        margin: 40px;
+      }
+      .logo a {
+        margin-right: 5px;
+    
+      }
+      #nested_grid {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 275px;
+        grid-gap: 34px;
+        justify-content: center;
+        padding-top: 40px;
+      }
+      .sidebar_post {
+        grid-area: sd;
+        padding-left: 10px;
+        background-color: #2f6a49;
+      }
+      .sidebar_post h2 {
+        font-weight: 500;
+        margin-bottom: 0px;
+      }
+      .container_post {
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: 75px 300px;
+        grid-template-areas: 
+        "hr hr hr hr hr hr hr hr"
+        "hd hd hd hd hd hd hd hd"
+        "sd sd sd sd sd sd sd sd"
+        "ft ft ft ft ft ft ft ft";
+      }
+      .sidebar_post .return {
+        text-decoration: none;
+        color: rgb(163, 152, 152);
+      }
+      .sidebar_post .author {
+        font-size: 12px;
+      }
+
+      .photobox {
+        align-items: center;
+        justify-content: center;
+        padding-left: 70px;
+        position: relative;
+        transition: filter 0.3s;
+      }
+
+      #nested div { 
+        padding: 5px;
+      }
+      #one a {
+        text-decoration: none;
+        color: white;
+      }
+      #one {
+        background-image: url(/img/ella-olsson-fxJTl_gDh28-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      #two {
+        background-image: url(/img/ella-olsson-fxJTl_gDh28-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      #three {
+        background-image: url(/img/ella-olsson-yb6bm_66Jdk-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      .photobox:hover {
+        filter: grayscale(100%);
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;       
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);   
+        opacity: 0;
+        transition: opacity 0.4s;
+        z-index: 2;
+      }
+      .photobox:hover .overlay {
+        opacity: 1;
+      }
+      .photobox h3 {
+        position: absolute;
+        left: 15px;
+        top: -20px;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      @media (min-width: 340px) and (max-width: 600px) {
+        .container {
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: 75px 300px 300px 1100px;
+          grid-template-areas: 
+          "hr"
+          "hd"
+          "sd"
+          "main"
+          "ft";
+        }
+        #nested_grid {
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: 300px 300px 300px;
+          grid-gap: 34px;
+          justify-content: center;
+          padding-top: 40px;
+          margin-left: 40px;
+          margin-right: 40px;
+        }
+      }
